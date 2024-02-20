@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Font Webpage</title>
+    <style>
+        body {
+            font-family: 'Micro 5', sans-serif;
+            background-color: #ADD8E6;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .unique-font {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="unique-font">
+        <h1>Welcome to Serving Fonts of a website</h1>
+        <p>First I downloaded my font from Google and installed it in my system. To specify the font in CSS, I have used @font-face; in HTML, link to the font files. After that I applied the font using font-family to the required components, making sure there were fallbacks for compatibility. After that I made some changes regarding the background color in my HTML code and last I have added a footer code that updates the time whenever it is updated.
+</p>
+    </div>
+</body>
+ <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</html>
