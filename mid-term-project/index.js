@@ -13,30 +13,29 @@ let gameData = {
     consequences: ["buildRaft", "climbCliff"],
     image: "https://www.shutterstock.com/image-photo/colorful-kayaks-on-tropical-beach-260nw-1465283042.jpg",
   },
- 
+  searchShelter: {
+    text: "You search for shelter and stumble upon an old cave. What will you do?",
+    choices: ["Explore the Cave", "Build a Shelter Outside"],
+    consequences: ["exploreCave", "buildShelterOutside"],
+    image: "https://thumbs.dreamstime.com/z/palm-shelters-sunbeds-china-beach-da-nang-vietnam-also-called-non-nuoc-south-sea-marble-74305818.jpg",
+  },
+  buildRaft: {
+    text: "You build a raft and set sail. Where will you go?",
+    choices: ["Head North", "Sail East"],
+    consequences: ["headNorth", "sailEast"],
+    image: "https://thumbs.dreamstime.com/b/raft-sea-wooden-toy-beach-34471062.jpg",
+  },
+  climbCliff: {
+    text: "You climb the cliff and spot a rescue team in the distance. Congratulations!",
+    choices: ["Ending 1"],
+    image: "https://highexposures.com/blog/wp-content/uploads/2014/02/annie1.jpg",
+  },
   exploreCave: {
     text: "You explore the cave and find a hidden treasure. Congratulations!",
     choices: ["Ending 2"],
     image: "https://www.rd.com/wp-content/uploads/2020/05/GettyImages-638387674.jpg",
   },
-  buildShelterOutside: {
-    text: "You build a shelter outside and survive until rescue arrives. Congratulations!",
-    choices: ["Ending 3"],
-    image: "https://www.shutterstock.com/image-photo/refugee-handmade-shelter-by-sea-260nw-1082830451.jpg",
-  },
-  exploreIsland: {
-    text: "You explore the island and find a hidden cave. What lies within?",
-    choices: ["Enter the Cave", "Return to the Beach"],
-    consequences: ["enterCave", "returnBeach"],
-    image: "https://www.aleenta.com/wp-content/uploads/Eight-Islands-to-Explore.jpg",
-  },
-  restRecuperate: {
-    text: "You rest and recuperate, preparing for further adventures. Congratulations!",
-    choices: ["Ending 5"],
-    image: "https://t4.ftcdn.net/jpg/06/02/12/03/360_F_602120398_1QjkOmGYJyAvZmRX6FflXtXGxtMKo2CL.jpg",
-  },
- 
-
+  
 };
 
 function startGame() {
