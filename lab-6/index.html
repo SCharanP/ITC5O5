@@ -12,7 +12,7 @@
     }
 
     header, footer {
-      background-color: #333;
+      background-color: #000000;
       color: #fff;
       grid-column: 1 / span 3;
     }
@@ -52,9 +52,14 @@
 
     footer {
       background-color: #964B00;
-      color: #fff;
+      color: #000000;
       clear: both;
       grid-column: 1 / span 3;
+    }
+
+    /* Color for addendum and last update headings */
+    footer h3 {
+      color: #FFD700; /* Gold color */
     }
   </style>
 </head>
@@ -87,17 +92,20 @@
     </aside>
   </div>
   <footer>
-    <p>Addendum: This JavaScript solves a sorting problem using bubble sort algorithm. It sorts a fixed array of integers when the 'Sort Array' button is clicked. Difficulties encountered were... (describe difficulties and solutions).</p>
+    <p>
+      <h3>Addendum:</h3> 
+      In this JavaScript implementation, we have created a basic form validation script that checks if the user has entered a valid email address in a form input field. It demonstrates the use of regular expressions for pattern matching and form validation in JavaScript. Difficulties encountered included formulating an appropriate regular expression for email validation and ensuring compatibility across different browsers.
+    </p>
+    <p>
+      <h3>Last Updated:</h3> 
+      <span id="lastModified"></span>
+    </p>
   </footer>
-   <footer>
-        <p>Last updated: 
-            <span id="lastModified"></span>
-        </p>
-    </footer>
-    <script type="text/javascript">
-         var x = document.lastModified;
-         document.getElementById('lastModified').textContent = x;
-    </script>
+  <script type="text/javascript">
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+
   <script>
     document.getElementById('sortButton').addEventListener('click', function() {
       var arr = [5, 3, 8, 1, 2];
@@ -118,7 +126,5 @@
       }
     }
   </script>
-  
 </body>
 </html>
-``
