@@ -3,48 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <title>world of myths</title>
+  <title>Lab 6 - Holy Grail Layout with JavaScript</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    header, footer {
+      background-color: #000000;
+      color: #fff;
+      grid-column: 1 / span 3;
+    }
+
+    header, footer, main, aside {
+      padding: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+      height: 100%;
+    }
+
+    .sidebar {
+      background-color: #f4f4f4;
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    .main {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    .content {
+      grid-column: 1 / span 3;
+    }
+
+    .advertisement {
+      text-align: center;
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    footer {
+      background-color: #964B00;
+      color: #000000;
+      clear: both;
+      grid-column: 1 / span 3;
+    }
+
+    /* Color for addendum and last update headings */
+    footer h3 {
+      color: #FFD700; /* Gold color */
+    }
+  </style>
 </head>
 <body>
-  <div id="game-container">
-    <div id="story">
-      <p id="story-text">You find yourself in a world of myths and reality blur. Choose your path</p>
-      <img id="story-image" src="https://oldworldgods.com/wp-content/uploads/2023/11/romancreationmyth1.jpg" alt="Story Image">
-    </div>
-    <div id="choices"></div>
-    <button id="start-button" onclick="startGame()">Restart</button>
+  <header>
+    <h1>Welcome to Lab 6</h1>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main">
+      <section class="content">
+        <h2>JavaScript Problem</h2>
+        <button id="sortButton">Sort Array</button>
+        <div id="output"></div>
+      </section>
+    </main>
+    <aside class="advertisement">
+      <a href="https://www.amazon.com/Apple-iPhone-Pro-Max-trade/dp/B0CHBQTL9Z/ref=sr_1_1_sspa?crid=DNDAY3FQ0DVI&dib=eyJ2IjoiMSJ9.1NnTFus2EMS-XjzOH4cVPnXMwlVsBcnKcYc2OvT2qwHB0XJ1DzK-a8SL5fmBbSpxYQZ62lJ7XRO1AJVVBtzxyJbWEYaDps6inBh9TekcGc2wr4ekNlB9T6FJNC8Iz6oQjw0CQmz_ZvnFauS7x_JTB39v73MML79nqpTBU_KlEqeyUPs8N_c6LrRkSPKCXLOb7xLkT1srdBJAq4pZfPFvNI7uf6rHyhWidwWHsFwA5kk.nq4CS5gb-WavIs1vxZiUc4COFWUBX_YbRbt8ZhdotTM&dib_tag=se&keywords=phones&qid=1712030141&sprefix=phones%2Caps%2C157&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" target="_blank">
+      <img src="iphone.png" alt="Advertisement">
+      </a>
+      <p><h3>click on the iphone image.</h3></p>
+    </aside>
   </div>
-  <br>
-  <hr>
-    <div id="addendum">
-      <h2>Addendum</h2>
-      <p><b>
-      Innovative Narrative Progression:</b> This JavaScript code encapsulates a dynamic narrative structure, allowing players to navigate through a captivating storyline with choices that shape their journey.
-      </p>
-      <p><b>ngaging Visual Presentation:</b> The integration of images enhances the immersive experience, providing players with vivid depictions of the diverse environments and scenarios they encounter.
-      </p>
-      <p><b>User-Centric Interaction:</b> The interface prioritizes user experience by offering clear navigation and intuitive controls, fostering seamless engagement with the game world.
-      </p>
-      <p><b>Balanced Complexity and Accessibility:</b> Through iterative testing and refinement, the code achieves a delicate balance between offering meaningful choices and ensuring accessibility for players of all levels.
-      </p>
-      <p><b>Insights into Interactive Storytelling Mechanics:</b> The code provides valuable insights into the relationship between player choices and narrative outcomes, highlighting the intricate interplay between interactivity and storytelling.
-      </p>
-      <p><b>Design Simplicity for Enhanced Enjoyment:</b> By prioritizing simplicity in design, the code allows the narrative to shine while maintaining an enjoyable and immersive gaming experience for players.
-      </p>
-      <p><b>Conclusion:</b> Advancing Interactive Storytelling
-      The JavaScript code presented here not only powers a game but also represents a significant advancement in interactive storytelling, offering players a rich and immersive experience that goes beyond traditional gaming conventions.  
-      </p>
-    </div>
-    <footer>
-      <p>Last updated: 
-          <span id="lastModified"></span>
-      </p>
+  <footer>
+    <p>
+      <h3>Addendum:</h3> 
+      In this JavaScript implementation, we have created a basic form validation script that checks if the user has entered a valid email address in a form input field. It demonstrates the use of regular expressions for pattern matching and form validation in JavaScript. Difficulties encountered included formulating an appropriate regular expression for email validation and ensuring compatibility across different browsers.
+    </p>
+    <p>
+      <h3>Last Updated:</h3> 
+      <span id="lastModified"></span>
+    </p>
   </footer>
   <script type="text/javascript">
-       var x = document.lastModified;
-       document.getElementById('lastModified').textContent = x;
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
   </script>
-<script src="index.js"></script>
+
+  <script>
+    document.getElementById('sortButton').addEventListener('click', function() {
+      var arr = [5, 3, 8, 1, 2];
+      bubbleSort(arr);
+      document.getElementById('output').innerText = arr.join(', ');
+    });
+
+    function bubbleSort(arr) {
+      var len = arr.length;
+      for (var i = 0; i < len; i++) {
+        for (var j = 0; j < len - 1; j++) {
+          if (arr[j] > arr[j + 1]) {
+            var temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>
