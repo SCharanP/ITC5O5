@@ -1,0 +1,95 @@
+@import url('https://fonts.cdnfonts.com/css/victor-mono');
+body {
+    font-family: 'Genos', sans-serif;
+    background-color: rgb(45, 163, 196);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  #game-container {
+    font-family: 'Genos', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 25px;
+    padding-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #story {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #story-text {
+    margin-bottom: 10px;
+    color:black;
+  }
+  
+  #story-image {
+    width: 500px;
+    border-radius: 8px;
+  }
+  
+  #choices {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: gray;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Genos', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  button:hover {
+    background-color: rgb(185, 97, 97);
+  }
+  
+  #start-button {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    
+  }
+  
+  #start-button:hover {
+    background-color: rgb(58, 54, 124);
+  }
+
+  #addendum {
+    grid-area: footer;
+    color: #fff;
+    text-align: center;
+    margin-top: 25px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer{
+    color:white;
+    font-size: 16px;
+  }
+  h2 {
+    color: white; 
+    border-bottom: 2px solid #ffffff; 
+    padding-bottom: 5px;
+    font-size: 23px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
