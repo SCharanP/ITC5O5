@@ -1,0 +1,190 @@
+:root {
+    --light-on-color: #ffeb3b; /* Bright yellow for lights on */
+    --light-off-color: #424242; /* Dark grey for lights off */
+    --board-background-color: #212121; /* Almost black for the board background */
+    --page-background-color: #303030; /* Dark background for the page */
+    --popup-background-color: #303030; /* Background for the addendum popup */
+}
+
+body, html {
+    height: 100vh;
+    width: 98.1%;
+    margin: 0;
+    background-color: var(--page-background-color);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    padding: 30px 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    border-radius: 0px 0px 25px 25px;
+    z-index: 10;
+}
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*margin: 0; /* Removes default margin */
+}
+
+.addendum-button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ffeb3b; /* Red color for visibility */
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+}
+
+.addendum-button:hover {
+    background-color: #ffeb3bbd; /* Darker shade on hover */
+}
+
+.reset-button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #f44336; /* Red color for visibility */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.reset-button:hover {
+    background-color: #d32f2f; /* Darker shade on hover */
+}
+
+.game-info-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 30px 0;
+    padding: 0px 200px;
+    color: #ffeb3bbd;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer, .moves {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 10px;
+    padding: 20px;
+    background-color: var(--board-background-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.light {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-on-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.is-off {
+    background-color: var(--light-off-color);
+}
+
+footer {
+    color: #fff;
+    margin: 10px;
+}
+
+footer p span {
+    background-color: #32ec1a;
+    padding: 5px;
+}
+
+.addendum-popup {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Width of the popup */
+    max-width: 600px; /* Maximum width */
+    height: 500px;
+    padding: 20px;
+    background-color: var(--popup-background-color);
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other content */
+    overflow: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    opacity: 0.99;
+}
+
+/* Optional: Full-screen overlay background */
+.addendum-overlay {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 999; /* Behind the popup, but above other content */
+}
+
+.addendum-popup h1 {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Optional: Adjust as needed for spacing */
+    margin-bottom: 20px; /* Optional: Adjust as needed for spacing */
+}
+
+.addendum-popup p, .addendum-popup ul {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.addendum-popup::-webkit-scrollbar {
+    width: 6px;
+}
+
+.addendum-popup::-webkit-scrollbar-thumb {
+    background-color: #acacac;
+    border-radius: 10px;
+    height: 100px;
+}
+
+@media (max-width: 600px) {
+    .game-board {
+        grid-template-columns: repeat(5, 40px);
+        grid-gap: 5px;
+        padding: 10px;
+    }
+
+    .light {
+        width: 40px;
+        height: 40px;
+    }
+}
+
