@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lights Out Game</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <header class="game-header">
+            <button id="addendumButton" class="addendum-button">Addendum</button>
+            <h1>Lights Out</h1>
+            <button id="resetButton" class="reset-button">Reset</button>
+        </header>
+
+        <main>
+            <section class="addendum-popup" id="addendumPopup">
+                <h1>Addendum</h1>
+                <p>Creating a playable version of the "Lights Out" game involved several steps, each with its unique set of challenges and creative decisions. The process encompassed designing the game's layout, implementing the logic with HTML, CSS, and JavaScript, and enhancing user interaction through visual and auditory feedback. Here's a breakdown of the process, challenges faced, and insights gained:</p>
+                <h3>Initial Layout and Design</h3>
+                <ul>
+                    <li><b>Process:</b> The game's layout was constructed using HTML for structure, CSS for styling, and JavaScript for interactivity. A grid layout was chosen to represent the game board, with each cell acting as an individual light that can toggle between states.</li>
+                    <li><b>Creative Choices:</b> A minimalist design was chosen to keep the focus on gameplay. The use of modern CSS properties like Flexbox and Grid ensured responsiveness and a clean layout. Colors were carefully selected to differentiate between the "on" and "off" states of the lights, enhancing visual clarity.</li>
+                    <li><b>Challenges:</b> Ensuring responsiveness across different devices was tricky, necessitating adjustments in grid sizing and spacing through media queries.</li>
+                </ul>
+                <h3>Implementing Game Logic</h3>
+                <ul>
+                    <li><b>Process:</b> JavaScript was used to implement the core game mechanics, including initializing a solvable game board, handling user interactions, and checking for win conditions.</li>
+                    <li><b>Creative</b> Choices: To ensure a solvable puzzle on each load, the game starts with all lights off and simulates random clicks across the board. This approach guarantees that the puzzle is always solvable by reversing these simulated actions.</li>
+                    <li><b>Challenges:</b> One of the main challenges was creating a random yet solvable starting configuration. The solution involved understanding the mathematical underpinnings of the game to ensure that any random setup could be reversed.</li>
+                </ul>
+                <h3>Enhancing User Interaction</h3>
+                <ul>
+                    <li><b>Process:</b> User feedback was enhanced through visual cues and sound effects. CSS transitions were used for smooth toggling of lights, and JavaScript was employed to play sound effects on clicks and when the game was won.</li>
+                    <li><b>Creative Choices:</b> Sound effects for clicks and winning were carefully chosen to be satisfying yet not intrusive, enhancing the gameplay experience without overwhelming the player.</li>
+                    <li><b>Challenges:</b> Incorporating sound required finding suitable audio files and ensuring they played correctly across different browsers and devices. Cross-browser compatibility issues were addressed by testing and adjusting audio file formats and playback methods.</li>
+                </ul>
+                <h3>Insights Gained</h3>
+                <ul>
+                    <li><b>User Experience is Key:</b> The importance of intuitive design and clear feedback became evident. Ensuring the game was easy to understand and responsive to user actions was crucial for engagement.</li>
+                    <li><b>Mathematics in Game Design:</b> The creation of a solvable puzzle highlighted the role of mathematical principles in game development. Understanding these concepts was essential for ensuring a balanced and engaging game.</li>
+                    <li><b>Cross-Platform Compatibility:</b> Developing for various devices and browsers underscored the need for flexible design strategies. Responsive design and cross-browser testing were invaluable in creating a consistent user experience.</li>
+                    <li><b>Simplicity in Design:</b> The minimalist approach not only streamlined development but also improved the user experience by focusing on gameplay mechanics without unnecessary distractions.</li>
+                </ul>
+                
+                <p>Throughout the development process, iterative testing and feedback were critical in refining the game. Each challenge presented an opportunity to learn and apply new techniques, contributing to the overall growth as a developer. The project underscored the importance of a well-thought-out design, clear coding practices, and the adaptability to overcome unforeseen challenges.</p>
+                
+                <!-- <button id="closePopup">Close</button> -->
+            </section>
+            
+            <section>
+                <div class="game-info">
+                    <div class="timer">Time: <span id="time">00:00</span></div>
+                    <div class="moves">Moves: <span id="moves">0</span></div>
+                </div>
+            </section>
+
+            <section>
+                <div id="gameBoard" class="game-board"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                Last updated:
+                <span id="lastModified"></span>
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
